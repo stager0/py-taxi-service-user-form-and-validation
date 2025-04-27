@@ -14,7 +14,7 @@
   <div class="ml-3">
     <h4>Cars</h4>
 
-    {% for car in driver.cars.all %}
+    {% for car in driver.cars.all() %}
       <hr>
       <p><strong>Model:</strong> {{ car.model }}</p>
       <p><strong>Manufacturer:</strong> {{ car.manufacturer.name }}</p>
