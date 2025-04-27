@@ -9,7 +9,7 @@ def custom_license_number_validator(license_number: str) -> str:
             f"The license number must be "
             f"{LENGTH_OF_LICENCE_NUMBER} characters long."
         )
-    if not license_number[:3].isalpha() and license_number[:3].isupper():
+    if not (license_number[:3].isalpha() and license_number[:3].isupper()):
         raise ValidationError(
             "The first 3 characters must be uppercase letters."
         )
